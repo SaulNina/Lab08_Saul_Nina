@@ -1,0 +1,6 @@
+@Lab8_Saul_Nina_HostAddress = http://localhost:5131
+
+GET {{Lab8_Saul_Nina_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
