@@ -8,11 +8,11 @@ builder.Services.AddDbContext<Lab8_Saul_Nina.Models.Linqexample2Context>(options
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<Lab8_Saul_Nina.Repositories.Interfaces.IUnitOfWork,
     Lab8_Saul_Nina.Repositories.UnitOfWork>();
-builder.Services.AddScoped<Lab8_Saul_Nina.Repositories.Interfaces.IClientService,
-        Lab8_Saul_Nina.Repositories.ClientService>();
+builder.Services.AddScoped<Lab8_Saul_Nina.Services.Interfaces.IClientService,
+        Lab8_Saul_Nina.Services.ClientService>();
 builder.Services.AddOpenApi();
-builder.Services.AddScoped<Lab8_Saul_Nina.Repositories.Interfaces.IProductService,
-    Lab8_Saul_Nina.Repositories.ProductService>();
+builder.Services.AddScoped<Lab8_Saul_Nina.Services.Interfaces.IProductService,
+    Lab8_Saul_Nina.Services.ProductService>();
 builder.Services.AddOpenApi();
 //Agregar Servicios de Swagger
 builder.Services.AddControllersWithViews();

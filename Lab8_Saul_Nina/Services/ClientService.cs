@@ -1,7 +1,7 @@
 using Lab8_Saul_Nina.Models;
 using Lab8_Saul_Nina.Repositories.Interfaces;
-
-namespace Lab8_Saul_Nina.Repositories;
+using Lab8_Saul_Nina.Services.Interfaces;
+namespace Lab8_Saul_Nina.Services;
 
 public class ClientService : IClientService
 {

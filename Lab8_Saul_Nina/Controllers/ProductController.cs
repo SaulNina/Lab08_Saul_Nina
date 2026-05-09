@@ -1,4 +1,4 @@
-using Lab8_Saul_Nina.Repositories.Interfaces;
+using Lab8_Saul_Nina.Services.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 

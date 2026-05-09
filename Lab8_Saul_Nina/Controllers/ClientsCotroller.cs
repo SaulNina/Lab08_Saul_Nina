@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Lab8_Saul_Nina.Repositories.Interfaces;
+using Lab8_Saul_Nina.Services.Interfaces;
 
 namespace Lab8_Saul_Nina.Controllers;
 
