@@ -24,8 +24,17 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
 
     public void Delete(T entity) => _context.Set<T>().Remove(entity);
 
-    public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
+    public async Task<IEnumerable<T>> FindAsync(
+        Expression<Func<T, bool>> predicate, 
+        params Expression<Func<T, object>>[] includes)
     {
-        return await _context.Set<T>().Where(predicate).ToListAsync();
+        IQueryable<T> query = _context.Set<T>();
+
+        foreach (var include in includes)
+        {
+            query = query.Include(include);
+        }
+
+        return await query.Where(predicate).ToListAsync();
     }
 }
